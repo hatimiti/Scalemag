@@ -1,0 +1,61 @@
+/**
+ * - For cleaning and building: $ gradle clean build
+ * - For reporting licenses:    $ gradle downloadLicenses
+ * - For dependencies:          $ gradle dependencies
+ */
+plugins {
+	id 'scala'
+	id 'application'
+	id 'eclipse'
+	id "com.github.hierynomus.license" version "0.13.1"
+}
+
+group = 'com.github.hatimiti'
+version = '0.1'
+
+[compileScala, compileTestScala]*.options*.encoding = 'UTF-8'
+mainClassName = 'com.github.hatimiti.gamix.app.Main'
+
+repositories {
+	mavenCentral()
+	jcenter()
+}
+
+dependencies {
+	compile files('lib/TWL/TWL.jar')
+	compile files('lib/TWL/TWLEffects.jar')
+
+	compile 'org.scala-lang:scala-library:2.12.1'
+	compile 'org.slick2d:slick2d-core:1.0.1'
+	compile 'org.apache.commons:commons-lang3:3.3.2'
+	compile 'xpp3:xpp3:1.1.4c'
+
+	testCompile 'junit:junit:4.12'
+	testCompile 'org.scalatest:scalatest_2.11:2.2.4'
+	testRuntime 'org.scala-lang.modules:scala-xml_2.11:1.0.3'
+}
+
+compileScala {
+	scalaCompileOptions.useCompileDaemon = true
+//	optionally specify host and port of the daemon:
+//	scalaCompileOptions.daemonServer = "localhost:4243"
+}
+
+// Adjusting memory settings
+tasks.withType(ScalaCompile) {
+	configure(scalaCompileOptions.forkOptions) {
+		memoryMaximumSize = '1g'
+		jvmArgs = ['-XX:MaxPermSize=1024m']
+	}
+}
+// Activating the Zinc based compiler
+tasks.withType(ScalaCompile) {
+	scalaCompileOptions.useAnt = false
+}
+
+license {
+	header rootProject.file('LICENSE')
+//	exclude "**/*"
+//	skipExistingHeaders true
+//	ignoreFailures true
+}

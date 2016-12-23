@@ -1,0 +1,48 @@
+Scalemag
+
+Copyright 2016 - hatimiti.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+
+This product contains modified portions of software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+This product depends on 'slick2d',
+To make 2D Java game development easier, which can be obtained at:
+
+  * LICENSE : The free and libral BSD License. (http://slick.ninjacave.com/license/)
+  * HOMEPAGE:
+    * http://slick.ninjacave.com/
+
+This product depends on 'lwjgl',
+Enables cross-platform access to popular native APIs useful in the development of graphics (OpenGL),
+audio (OpenAL) and parallel computing (OpenCL) applications, which can be obtained at:
+
+  * LICENSE : Lightweight Java Game Library License (./lib/lwjgl/LICENSE-LWJGL)
+  * HOMEPAGE:
+    * https://www.lwjgl.org/
+
+This product depends on 'MXP1:xpp3',
+Fast parse XML files, which can be obtained at:
+
+  * LICENSE : Apache License, Version 1.1
+  * HOMEPAGE:
+    * https://www.extreme.indiana.edu/xgws/xsoap/xpp/mxp1/
+
+This product depends on 'license-gradle-plugin',
+Scan and adapt source files on this product for checking licenses of libraries depended, which can be obtained at:
+
+  * LICENSE : Apache License, Version 2.0
+  * HOMEPAGE:
+    * https://github.com/hierynomus/license-gradle-plugin
