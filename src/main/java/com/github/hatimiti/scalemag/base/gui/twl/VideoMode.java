@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2008-2009, Matthias Mann
+ * Copyright (c) 2008, Matthias Mann
  *
  * All rights reserved.
  *
@@ -27,47 +27,21 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.github.hatimiti.gamix.base.gui.twl;
+package com.github.hatimiti.scalemag.base.gui.twl;
 
-import de.matthiasmann.twl.ResizableFrame;
-import de.matthiasmann.twl.Widget;
-import de.matthiasmann.twleffects.MinimizeEffect;
+import org.lwjgl.opengl.DisplayMode;
 
 /**
  *
  * @author Matthias Mann
  */
-public class FadeFrame extends ResizableFrame {
+public class VideoMode {
 
-	public FadeFrame() {
-	}
+	public final DisplayMode mode;
+	public final boolean fullscreen;
 
-	public void show() {
-		setVisible(true);
-		requestKeyboardFocus();
-	}
-
-	public void hide() {
-		if(isVisible() && getFadeDurationHide() > 0) {
-			MinimizeEffect minimizeEffect = new MinimizeEffect(this);
-			minimizeEffect.setAnimationDuration(getFadeDurationHide());
-			setRenderOffscreen(minimizeEffect);
-		}
-		setVisible(false);
-	}
-
-	public void center(float relX, float relY) {
-		Widget p = getParent();
-		setPosition(
-				p.getInnerX() + (int)((p.getInnerWidth() - getWidth()) * relX),
-				p.getInnerY() + (int)((p.getInnerHeight() - getHeight()) * relY));
-	}
-
-	public void addCloseCallback() {
-		addCloseCallback(new Runnable() {
-			public void run() {
-				hide();
-			}
-		});
+	public VideoMode(DisplayMode mode, boolean fullscreen) {
+		this.mode = mode;
+		this.fullscreen = fullscreen;
 	}
 }

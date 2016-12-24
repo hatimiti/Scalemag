@@ -1,4 +1,4 @@
-package com.github.hatimiti.gamix.base
+package com.github.hatimiti.scalemag.base
 
 abstract class BaseGame {
   

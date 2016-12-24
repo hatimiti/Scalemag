@@ -1,15 +1,15 @@
-package com.github.hatimiti.gamix.app.game.menu;
+package com.github.hatimiti.scalemag.app.game.menu;
 
-import com.github.hatimiti.gamix.base.gui.twl.TWLStateBasedGame;
+import com.github.hatimiti.scalemag.base.gui.twl.TWLStateBasedGame;
 import java.net.URL
 import org.newdawn.slick.util.ResourceLoader
 import org.newdawn.slick.GameContainer
-import com.github.hatimiti.gamix.base.BaseGameState
+import com.github.hatimiti.scalemag.base.BaseGameState
 import org.newdawn.slick.state.StateBasedGame
 import org.newdawn.slick.Graphics
 import java.io.File
 import org.newdawn.slick.Input
-import com.github.hatimiti.gamix.app.support.GameSceneState
+import com.github.hatimiti.scalemag.app.support.GameSceneState
 
 class MenuState extends BaseGameState(GameSceneState.MENU) {
 

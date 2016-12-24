@@ -1,6 +1,6 @@
-package com.github.hatimiti.gamix.app.support;
+package com.github.hatimiti.scalemag.app.support;
 
-import com.github.hatimiti.gamix.base.gui.twl.TWLStateBasedGame;
+import com.github.hatimiti.scalemag.base.gui.twl.TWLStateBasedGame;
 import java.net.URL
 import org.newdawn.slick.util.ResourceLoader
 import org.newdawn.slick.GameContainer

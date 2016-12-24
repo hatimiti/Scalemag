@@ -1,4 +1,4 @@
-package com.github.hatimiti.gamix.base.domain;
+package com.github.hatimiti.scalemag.base.domain;
 
 /**
  * The base class for all of other classes in the domain.

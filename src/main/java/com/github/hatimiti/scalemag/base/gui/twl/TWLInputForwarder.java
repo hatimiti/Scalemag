@@ -27,7 +27,7 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.github.hatimiti.gamix.base.gui.twl;
+package com.github.hatimiti.scalemag.base.gui.twl;
 
 import org.lwjgl.opengl.Display;
 import org.newdawn.slick.Input;

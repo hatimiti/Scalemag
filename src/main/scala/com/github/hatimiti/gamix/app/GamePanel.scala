@@ -1,15 +1,15 @@
-package com.github.hatimiti.gamix.app
+package com.github.hatimiti.scalemag.app
 
 import java.net.URL
 
 import org.newdawn.slick.GameContainer
 import org.newdawn.slick.util.ResourceLoader
 
-import com.github.hatimiti.gamix.app.game.field.FieldState
-import com.github.hatimiti.gamix.app.game.load.LoadState
-import com.github.hatimiti.gamix.app.game.menu.MenuState
-import com.github.hatimiti.gamix.app.support.GameSceneState
-import com.github.hatimiti.gamix.base.gui.twl.TWLStateBasedGame
+import com.github.hatimiti.scalemag.app.game.field.FieldState
+import com.github.hatimiti.scalemag.app.game.load.LoadState
+import com.github.hatimiti.scalemag.app.game.menu.MenuState
+import com.github.hatimiti.scalemag.app.support.GameSceneState
+import com.github.hatimiti.scalemag.base.gui.twl.TWLStateBasedGame
 
 class GamePanel extends TWLStateBasedGame(GamePanel.TITLE) {
 

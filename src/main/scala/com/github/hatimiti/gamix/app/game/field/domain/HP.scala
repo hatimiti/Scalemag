@@ -1,6 +1,6 @@
-package com.github.hatimiti.gamix.app.game.field.domain;
+package com.github.hatimiti.scalemag.app.game.field.domain;
 
-import com.github.hatimiti.gamix.base.domain.BaseIntType
+import com.github.hatimiti.scalemag.base.domain.BaseIntType
 
 class HP(hp: Int) extends BaseIntType(hp);
 

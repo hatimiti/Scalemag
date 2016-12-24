@@ -14,7 +14,7 @@ group = 'com.github.hatimiti'
 version = '0.1'
 
 [compileScala, compileTestScala]*.options*.encoding = 'UTF-8'
-mainClassName = 'com.github.hatimiti.gamix.app.Main'
+mainClassName = 'com.github.hatimiti.scalemag.app.Main'
 
 repositories {
 	mavenCentral()
@@ -55,7 +55,7 @@ tasks.withType(ScalaCompile) {
 
 license {
 	header rootProject.file('LICENSE')
-//	exclude "**/*"
+	exclude "**/*"
 //	skipExistingHeaders true
 //	ignoreFailures true
 }

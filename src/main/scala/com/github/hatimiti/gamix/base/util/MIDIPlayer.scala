@@ -1,4 +1,4 @@
-package com.github.hatimiti.gamix.base.util
+package com.github.hatimiti.scalemag.base.util
 
 import javax.sound.midi.MidiSystem
 import javax.sound.midi.Sequence

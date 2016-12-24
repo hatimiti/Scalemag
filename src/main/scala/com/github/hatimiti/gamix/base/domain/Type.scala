@@ -1,7 +1,7 @@
-package com.github.hatimiti.gamix.base.domain;
+package com.github.hatimiti.scalemag.base.domain;
 
 import org.newdawn.slick.AppGameContainer
-import com.github.hatimiti.gamix.app.GamePanel
+import com.github.hatimiti.scalemag.app.GamePanel
 
 trait Type[T] {
   

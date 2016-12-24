@@ -1,4 +1,4 @@
-package com.github.hatimiti.gamix.app
+package com.github.hatimiti.scalemag.app
 
 object Main {
   

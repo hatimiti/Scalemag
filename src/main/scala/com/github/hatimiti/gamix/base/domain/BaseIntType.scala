@@ -1,4 +1,4 @@
-package com.github.hatimiti.gamix.base.domain;
+package com.github.hatimiti.scalemag.base.domain;
 
 abstract class BaseIntType(v: Int)
     extends BaseType(v) with Comparable[BaseIntType] {
