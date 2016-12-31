@@ -11,7 +11,7 @@ import org.newdawn.slick.GameContainer
   case object FIELD extends GameSceneState(100)
   case object SERVER extends GameSceneState(9999)
   
-  val values = Array(LOAD)
+  val values = Array(LOAD, MENU, FIELD, SERVER)
   
 }
 

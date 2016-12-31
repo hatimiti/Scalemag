@@ -7,7 +7,7 @@ package com.github.hatimiti.scalemag.base.domain;
  * 
  * @param <T> The standard type.
  */
-abstract class BaseType[T](val v: T) extends Type[T] {
+abstract class BaseType[T](private[this] val v: T) extends Type[T] {
 
   override def toString(): String = {
     this.value.toString()

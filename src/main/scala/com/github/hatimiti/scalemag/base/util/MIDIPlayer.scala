@@ -8,18 +8,15 @@ import java.io.File
 /**
  * The music player for MIDI format.
  */
-class MIDIPlayer(
-  /** The sequencer that plays the music by using sequence. */
-  val sequencer:Sequencer,
-  /** The sequence that stores the music information. */
-  var sequence: Sequence
-) {
+class MIDIPlayer {
   
-  def this() {
-    this(MidiSystem.getSequencer(), null)
-    sequencer.setLoopCount(Sequencer.LOOP_CONTINUOUSLY)
-    sequencer.open()
-  }
+  /** The sequencer that plays the music by using sequence. */
+  private[this] val sequencer = MidiSystem.getSequencer
+  /** The sequence that stores the music information. */
+  private[this] var sequence: Sequence = null
+  
+  sequencer.setLoopCount(Sequencer.LOOP_CONTINUOUSLY)
+  sequencer.open()
   
   def play(file: File) {
     stop();
@@ -33,4 +30,5 @@ class MIDIPlayer(
       sequencer.stop()
     }
   }
+  
 }

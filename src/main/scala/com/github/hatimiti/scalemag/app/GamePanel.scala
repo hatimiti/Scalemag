@@ -24,7 +24,9 @@ class GamePanel extends TWLStateBasedGame(GamePanel.TITLE) {
   }
 
   override def initStatesList(gc: GameContainer) {}
-  override def getThemeURL(): URL = ResourceLoader.getResource("twl/gameui.xml")
+
+  protected override def getThemeURL(): URL =
+    ResourceLoader.getResource("twl/gameui.xml")
 }
 
 private object GamePanel {
