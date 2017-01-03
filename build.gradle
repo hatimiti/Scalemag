@@ -26,7 +26,7 @@ dependencies {
 	compile files('lib/TWL/TWLEffects.jar')
 
 	compile 'org.scala-lang:scala-library:2.12.1'
-	compile 'org.slick2d:slick2d-core:1.0.1'
+	compile 'org.slick2d:slick2d-core:1.0.2'
 	compile 'org.apache.commons:commons-lang3:3.3.2'
 	compile 'xpp3:xpp3:1.1.4c'
 
