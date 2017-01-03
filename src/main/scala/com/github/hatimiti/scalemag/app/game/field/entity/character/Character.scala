@@ -11,13 +11,15 @@ import com.github.hatimiti.scalemag.app.game.field.entity.support.direction.Faci
 import com.github.hatimiti.scalemag.base.util.Point
 import org.newdawn.slick.Color
 import com.github.hatimiti.scalemag.app.game.field.entity.Entity
+import com.github.hatimiti.scalemag.app.game.field.move.Movable
 
 /**
  */
 abstract class Character(
     protected[this] val characterNumber: Int,
     protected[this] val defaultPoint: Point)
-  extends Entity (new Rectangle(defaultPoint.x, defaultPoint.y, 20, 32)) {
+  extends Entity (new Rectangle(defaultPoint.x, defaultPoint.y, 20, 32))
+  with Movable {
   
 //		this.characterNumber = characterNumber;
 //		this.liveStatus = new LiveStatus(
@@ -27,7 +29,7 @@ abstract class Character(
 //		this.moveImage = new MoveDirectionAnimation(characterNumber, 32, 32);
 
 //		this.weapon = new EmptyWeapon(this);
-		this.direction = FacingDirection.DOWN;
+		facesTo(FacingDirection.DOWN)
 //		this.attackState = AttackState.STOP;
 
 		protected[this] var existsInGame = true;

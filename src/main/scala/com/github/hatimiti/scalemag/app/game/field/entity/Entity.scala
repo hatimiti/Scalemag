@@ -12,13 +12,15 @@ import com.github.hatimiti.scalemag.base.util.Point
 /**
  * The object is base class all of entities in field state.
  * The entities of field should be extend this class.
+ * 
+ * @author hatimiti
  */
 abstract class Entity(
     protected[this] val shape: Shape) extends Serializable {
   
   protected[this] val entityId
     = new EntityId(RandomStringUtils.randomAlphanumeric(10))
-  protected[this] var direction: FacingDirection = DOWN
+  protected[this] var _direction: FacingDirection = DOWN
   
   /**
    * Sets the coordinate to the point designated by the argument.
@@ -50,7 +52,7 @@ abstract class Entity(
    * Faces to the direction disignated by the argument.
    * @param direction the direction facing.
    */
-  def facesTo(direction: FacingDirection) = this.direction = direction
+  def facesTo(direction: FacingDirection) = _direction = direction
   
   /*
    * The followings are abstract methods.
@@ -63,5 +65,6 @@ abstract class Entity(
    * If it returns the false, this entity object will be removed from the game.
    */
   def alreadyMarkedForDeletion(): Boolean
-  
+ 
+  def direction(): FacingDirection = _direction
 }
