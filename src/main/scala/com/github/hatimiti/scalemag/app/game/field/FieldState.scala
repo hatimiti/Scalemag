@@ -1,22 +1,22 @@
 package com.github.hatimiti.scalemag.app.game.field;
 
-import com.github.hatimiti.scalemag.base.gui.twl.TWLStateBasedGame;
-import java.net.URL
-import org.newdawn.slick.util.ResourceLoader
 import org.newdawn.slick.GameContainer
-import com.github.hatimiti.scalemag.base.BaseGameState
-import org.newdawn.slick.state.StateBasedGame
 import org.newdawn.slick.Graphics
+import org.newdawn.slick.state.StateBasedGame
+
+import com.github.hatimiti.scalemag.app.game.field.entity.character.Player
 import com.github.hatimiti.scalemag.app.support.GameSceneState
-import com.github.hatimiti.scalemag.app.game.field.domain.HP
+import com.github.hatimiti.scalemag.base.BaseGameState
 import com.github.hatimiti.scalemag.base.gui.twl.RootPane
+import com.github.hatimiti.scalemag.base.util.Point
 
 class FieldState extends BaseGameState(GameSceneState.FIELD) {
   
-  private[field] var guiManager: FieldGUIManager = null;
+  private[field] val guiManager = new FieldGUIManager(this)
+  private[field] var player: Player = null;
   
   override def init(container: GameContainer, game: StateBasedGame) {
-    this.guiManager = new FieldGUIManager(this)
+    player = new Player(101, Point.at(300, 500))
   }
   
   override def enter(container: GameContainer, game: StateBasedGame) {

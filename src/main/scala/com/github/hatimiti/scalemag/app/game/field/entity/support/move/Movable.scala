@@ -1,10 +1,17 @@
-package com.github.hatimiti.scalemag.app.game.field.move;
+package com.github.hatimiti.scalemag.app.game.field.entity.support.move;
 
 import org.newdawn.slick.util.pathfinding.Mover
+
 import com.github.hatimiti.scalemag.app.game.field.entity.Entity
-import com.github.hatimiti.scalemag.app.game.field.entity.support.move.MovementState
-import com.github.hatimiti.scalemag.app.game.field.entity.support.direction.FacingDirection
-import com.github.hatimiti.scalemag.app.game.field.entity.support.direction.FacingDirection._
+import com.github.hatimiti.scalemag.app.game.field.entity.support.direction.FacingDirection.DOWN
+import com.github.hatimiti.scalemag.app.game.field.entity.support.direction.FacingDirection.DOWN_LEFT
+import com.github.hatimiti.scalemag.app.game.field.entity.support.direction.FacingDirection.DOWN_RIGHT
+import com.github.hatimiti.scalemag.app.game.field.entity.support.direction.FacingDirection.LEFT
+import com.github.hatimiti.scalemag.app.game.field.entity.support.direction.FacingDirection.NONE
+import com.github.hatimiti.scalemag.app.game.field.entity.support.direction.FacingDirection.RIGHT
+import com.github.hatimiti.scalemag.app.game.field.entity.support.direction.FacingDirection.UP
+import com.github.hatimiti.scalemag.app.game.field.entity.support.direction.FacingDirection.UP_LEFT
+import com.github.hatimiti.scalemag.app.game.field.entity.support.direction.FacingDirection.UP_RIGHT
 import com.github.hatimiti.scalemag.base.util.Point
 
 /**
@@ -15,7 +22,7 @@ import com.github.hatimiti.scalemag.base.util.Point
  */
 trait Movable extends Mover {
 
-  protected def origin(): Entity;
+  protected[this] def origin(): Entity;
 
   protected var dx = 0
   protected var dy = 0

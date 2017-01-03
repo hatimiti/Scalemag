@@ -5,8 +5,7 @@ import com.github.hatimiti.scalemag.base.util.Point
 
 /**
  */
-abstract class Player(characterNumber: Int, defaultPoint: Point)
+class Player(characterNumber: Int, defaultPoint: Point)
   extends Character(characterNumber, defaultPoint) {
-  
-//  override def update(ec: EntityContainer)
+
 }
