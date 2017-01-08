@@ -59,7 +59,7 @@ abstract class Entity(
    */
 
   def draw(g: Graphics): Unit
-//  def update(ec: EntityContainer): Unit
+  def update(): Unit
 
   /**
    * If it returns the false, this entity object will be removed from the game.

@@ -12,8 +12,7 @@ import com.github.hatimiti.scalemag.base.util.Point
 /**
  */
 abstract class Character(
-    protected[this] val characterNumber: Int,
-    protected[this] val defaultPoint: Point)
+    protected[this] val characterNumber: Int, defaultPoint: Point)
   extends Entity (new Rectangle(defaultPoint.x, defaultPoint.y, 20, 32))
   with Movable {
   

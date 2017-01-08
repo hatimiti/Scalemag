@@ -7,37 +7,6 @@ package com.github.hatimiti.scalemag.base.domain;
  * 
  * @param <T> The standard type.
  */
-abstract class BaseType[T](private[this] val v: T) extends Type[T] {
-
-  override def toString(): String = {
-    this.value.toString()
-  }
-  
-  override def equals(obj: Any): Boolean = {
-    obj match {
-      case v: Type[T] => value().equals(v.value())
-      case _ => false
-    }
-  }
-  
-  override def hashCode(): Int = {
-    this.value.hashCode()
-  }
-  
+abstract case class BaseType[T](val v: T) extends Type[T] {
   override def value(): T = v;
-  
-//  /**
-//   * The implementation instead of instanceof.
-//   */
-//  protected def isIncetainceOf(obj: AnyRef): Boolean = {
-//    if (obj == null) {
-//      return false;
-//    }
-//    try {
-//      return this.getClass().equals(obj.getClass())
-//    } catch {
-//      case _: Throwable => return false;
-//    }
-//  }
-
 }
