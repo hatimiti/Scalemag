@@ -34,7 +34,7 @@ private[field] class FieldGUIManager private[field](
   private[field] def update(
       gc: GameContainer,
       game: StateBasedGame,
-      g: Graphics) {
+      delta: Int) {
     //TODO should implement this.
   }
   

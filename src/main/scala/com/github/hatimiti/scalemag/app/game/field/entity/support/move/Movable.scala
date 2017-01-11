@@ -39,7 +39,7 @@ trait Movable extends Mover {
   def isRebounding(): Boolean = MovementState.REBOUND == this.movementState
 
   /** Gets current speed of the entity. */
-  def speed(): Int = if (isStopped()) 0 else this.speed
+  def speed(): Int = if (isStopped()) 0 else _speed
 
   def moves() {
     if (isRebounding()) {
