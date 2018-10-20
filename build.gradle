@@ -7,6 +7,7 @@ plugins {
 	id 'scala'
 	id 'application'
 	id 'eclipse'
+	id 'idea'
 	id "com.github.hierynomus.license" version "0.13.1"
 }
 
@@ -36,7 +37,7 @@ dependencies {
 }
 
 compileScala {
-	scalaCompileOptions.useCompileDaemon = true
+	scalaCompileOptions.metaClass.useCompileDaemon = true
 //	optionally specify host and port of the daemon:
 //	scalaCompileOptions.daemonServer = "localhost:4243"
 }
@@ -50,7 +51,7 @@ tasks.withType(ScalaCompile) {
 }
 // Activating the Zinc based compiler
 tasks.withType(ScalaCompile) {
-	scalaCompileOptions.useAnt = false
+	scalaCompileOptions.metaClass.useAnt = false
 }
 
 license {
